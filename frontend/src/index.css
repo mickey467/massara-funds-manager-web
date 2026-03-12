@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { direction: rtl; }
+  body {
+    font-family: 'Traditional Arabic', Arial, sans-serif;
+    background: linear-gradient(to bottom, #faf8f5, #f0ebe3);
+    min-height: 100vh;
+    color: #2c1810;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-light text-white font-semibold px-6 py-2.5 rounded-lg transition-colors duration-200 disabled:opacity-50;
+  }
+  .btn-secondary {
+    @apply bg-white border-2 border-gold text-primary hover:bg-amber-50 font-semibold px-6 py-2.5 rounded-lg transition-colors duration-200;
+  }
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-colors duration-200;
+  }
+  .card {
+    @apply bg-white rounded-2xl border-2 border-amber-100 shadow-sm p-6;
+  }
+  .input {
+    @apply w-full px-4 py-2.5 border-2 border-amber-200 rounded-lg bg-amber-50 focus:outline-none focus:border-gold focus:bg-white transition-colors text-right;
+  }
+  .label {
+    @apply block text-sm font-semibold text-primary mb-1;
+  }
+  .section-title {
+    @apply text-primary text-xl font-bold mb-4;
+  }
+  .divider {
+    @apply h-0.5 w-full my-4;
+    background: linear-gradient(to right, transparent, #D4AF37, transparent);
+  }
+}
